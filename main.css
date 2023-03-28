@@ -1,0 +1,357 @@
+/* General Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #f8f8f8; /* Off-white background color */
+  border: 5px solid #800020;;
+  
+}
+
+a {
+  color: #333333; /* Dark grey link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: orangered;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+  margin: 2rem 0;
+}
+
+
+
+/* Navigation Styles */
+.navbar {
+  background-color: transparent;
+  border-bottom: #800020 2px groove;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0%;
+  padding: 50px;
+  top: 0;
+  z-index: 1;
+  font-family: 'Lora', serif;
+
+}
+
+.navbar h1 {
+  font-size: 24px;
+  margin: 0 auto 0 60px;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.menu-link {
+  color: #333333;
+  font-size: 18px;
+}
+
+.menu-link:hover {
+  color: orangered;
+}
+
+.menu-link:focus {
+  color: black;
+}
+
+.menu-link:active {
+  color: red;
+}
+.fa-sharp.fa-solid.fa-stethoscope {
+  font-size: 2.5em;
+}
+.emphasis-link {
+  font-weight: bold;
+  color: #0070C0;
+  font-size: larger;
+}
+.button {
+  display: inline-block;
+  background-color: #1d1d1d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #4a4a4a;
+  cursor: pointer;
+}
+.project img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project img:hover {
+  transform: scale(1.7);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Hero Image Styles */
+header {
+  text-align: center;
+}
+.hero-pic {
+  display: inline-block;
+  margin: 0 auto 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Written Section Styles */
+.written-section {
+  margin: 20px 0 0 ;
+  padding: 0 10px;
+  text-align: justify;
+  
+}
+h2  {
+  margin: 20px;
+  text-align: center;
+  margin: 0 10px 20px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: underline;
+  text-align: center;
+  font-family: 'Lora', serif;
+  padding: 20px;
+}
+
+.written-section  p {
+  margin: 20px;
+  line-height: 1.5;
+  
+}
+.written-section.written-start {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #800020;
+  text-decoration: underline;
+  font-family: 'Lora', serif;
+}
+
+
+.written-section p::first-letter {
+  font-size: 1.2em;
+  font-family: 'Lora', serif;
+  color: burgundy;
+}
+
+.written-section i, .written-section img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.project p {
+  margin: 20px;
+  line-height: 1.5;
+
+}
+.project h4 {
+  margin: 20px;
+  line-height: 1.5;
+  color: navy;
+
+}
+.project img {
+  margin: 20px;
+  line-height: 1.5;
+
+}
+h3 {
+  margin: 20px;
+  line-height: 1.5;
+  text-decoration: underline;
+
+}
+.project p::first-letter {
+  font-size: 1.2em;
+  font-family: 'Lora', serif;
+  color: burgundy;
+}
+
+
+
+/* Contact List Styles */
+.contact-list {
+  list-style: none;
+  margin: 0 0 20px 20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-list li {
+  margin-right: 10px;
+}
+
+.contact-list i {
+  font-size: 24px;
+  color:  black;
+  margin-right: 5px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: transparent;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-top: #800020 2px groove;
+}
+
+.footer i {
+  font-size: 24px;
+  color: #333333;
+  margin-right: 80px;
+}
+.footer i:hover {
+    color: orangered;
+}
+
+/* Media Queries for Mobile Devices */
+
+  /* Navigation Styles for Mobile Devices */
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      background-color: transparent;
+      color: #333333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      top: 0;
+      margin-bottom: 10px;
+    }
+  
+    .navbar h1 {
+      font-size: 28px;
+      margin-left: 10px;
+    }
+  
+    .navbar i {
+      font-size: 32px;
+    }
+  
+    .navbar ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      text-align: center;
+      z-index: 1;
+    }
+  
+    .navbar li {
+      margin: 10px 0;
+    }
+  
+    .navbar a {
+      color: #333333;
+      text-decoration: none;
+    }
+  
+    .navbar .menu-icon {
+      display: block;
+    }
+  
+    .navbar .menu-icon i {
+      font-size: 32px;
+      cursor: pointer;
+    }
+    .fa-sharp.fa-solid.fa-stethoscope {
+      font-size: 0.9em;
+    }
+  }
+  
+
+  /* Hero Image Styles for Mobile Devices */
+  .hero-pic {
+    margin: 170px 0 0 0;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Written Section Styles for Mobile Devices */
+  .written-section {
+    padding: 0 5px;
+  }
+
+  /* Contact List Styles for Mobile Devices */
+  .contact-list {
+    justify-content: flex-start;
+  }
+
+  .contact-list li {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .contact-list i {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+
+  /* Footer Styles for mobile devices*/
+  @media only screen and (max-width: 600px) {
+    .footer {
+      background-color: transparent;
+      color: #333333;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    .footer i {
+      font-size: 24px;
+    }
+  }
