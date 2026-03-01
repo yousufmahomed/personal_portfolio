@@ -2,70 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto:wght@300&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>Dr. Yousuf Mahomed | Health-Tech Innovator</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/834304401a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="/images/Medicine Stethoscope.png">
-
-
-    <title>My Personal Web Page - Dr Yousuf Mahomed</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="navbar">
-        <i class="fa-sharp fa-solid fa-stethoscope"></i>
-        <h1>Dr Yousuf Mahomed</h1>
-        <ul>
-          <li><a href="/Medical_career.html" class="menu-link">Medical Career</a></li>
-          <li><a href="/salesforce.html" class="menu-link">Salesforce</a></li>
-          <li><a href="/portfolio.html" class="menu-link">Portfolio</a></li>
-          <li><a href="/resume.html" class="menu-link">Resume</a></li>
-         
-        </ul>
-      </div>
-      
-    <header>
-        <img src="/images/linpic.jpg" alt="A Picture of Dr Yousuf Mahomed" class="hero-pic">
-    </header>
-    <main>
-        <section>
-            <h2>About</h2>
-            <article class="written-section">
-                <p>I am a medical doctor currently working as the Head of Department of the Emergency Department of Madadeni Regional Hospital in Newcastle, Kwa-Zulu Natal, South Africa. I have held this position since 2015 and am passionate about emergency medicine and teaching of young doctors.</p>
-                <p>I am also very involved in studying customer relationship management and am a certified Salesforce Administrator (with plans to add more certifications in the near future), and am a full ranger on Salesforce Trailhead. I am a firm believer that the future of medicine is in the cloud.</p>
-                <p>I am also currently learning, and have been certified in, responsive web design (HTML &amp; CSS), and have also completed two JavaScript courses . I have also done courses in CLI, GIT, various text editors (including basic VIM), and am adept at the Microsoft Office Suite of programs.</p>
-            </article>
-            <article class="written-section">
-                <p>I am passionate about using technology to improve the practice of medicine. This includes using it in teaching, patient analysis, and patient experience improvement. I offer a unique combination of practical medical knowledge (gained over 20 years of practice), combined with the technical knowledge and technical sophistication to allow me to understand both sides of the coin when it comes to medical technical advancement and programming.</p>
-            </article>
-            <article class="written-section">
-                <p>I am hoping to attract those in the health information management and Salesforce spheres. This website is here to showcase me as an individual and a potential employee.</p>
-            </article>
-            <div class="written-section">
-                <p>If you're interested in learning more or working together, please feel free to contact me through any of the following channels: <br>
-                Alternatively click on the icons in the footer to link directly or see my open-source repositories and achievements. <br>
-                </p>
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-envelope"></i> Email: yousufmahomed@gmail.com</li>
-                    <li><i class="fa-brands fa-whatsapp"></i> WhatsApp: +27 (82) 494 9750</li>
-                    <li><i class="fa-brands fa-telegram"></i> Telegram: +27 (82) 494 9750</li>
-                    <li><i class="fa-solid fa-phone"></i> Phone: +27 (82) 494 9750</li>
-                </ul>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-stethoscope"></i> 
+                <span>Dr. Yousuf Mahomed</span>
             </div>
-            
-            <footer class="footer">
-                <a href="mailto:yousufmahomed@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:+27824949750" target="_blank"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://wa.me/+27824949750" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://t.me/yousufmahomed" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                <a href="https://github.com/yousufmahomed"  target="_blank"><i class="fa-brands fa-github"></i></a>
-                 <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                 <a href="https://trailblazer.me/id/ymahomed1" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
-            </footer>
+            <ul class="nav-links">
+                <li><a href="/Medical_career.html">Medical Career</a></li>
+                <li><a href="/salesforce.html">Salesforce</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/resume.html" class="btn-cta">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bridging <span class="highlight">Medicine</span> and <span class="highlight">The Cloud</span>.</h1>
+                <p class="hero-sub">Head of Emergency Medicine & Certified Salesforce Administrator. Leveraging 20 years of clinical expertise to build the future of digital health.</p>
+                <div class="hero-actions">
+                    <a href="#about" class="btn-primary">Explore My Work</a>
+                    <a href="mailto:yousufmahomed@gmail.com" class="btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+               <img src="/images/abstract of dr.jpg" alt="Abstract Medical Innovation" class="hero-img">
+            </div>
+        </div>
+    </header>
+
+    <main id="about" class="container">
+        <section class="expertise-grid">
+            <div class="card">
+                <i class="fa-solid fa-heart-pulse icon"></i>
+                <h3>Clinical Leadership</h3>
+                <p>HOD of Emergency Medicine at Madadeni Regional Hospital. Dedicated to emergency care and mentoring the next generation of physicians.</p>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-salesforce icon"></i>
+                <h3>Salesforce Ecosystem</h3>
+                <p>Certified Salesforce Administrator and Full Ranger. Specialized in translating complex clinical workflows into cloud-based CRM solutions.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-code icon"></i>
+                <h3>Web Development</h3>
+                <p>Certified in Responsive Design and JavaScript. Proficient in Git, CLI, and modern development environments to bridge the tech-clinical gap.</p>
+            </div>
+        </section>
+
+        <section class="bio-section">
+            <div class="bio-content">
+                <h2>Health Information Innovator</h2>
+                <p>I offer a unique combination of practical medical knowledge gained over 20 years of practice, combined with technical sophistication. I understand both sides of the coin when it comes to medical technical advancement and programming.</p>
+            </div>
+            <div class="bio-image">
+               <img src="/images/abstract2.jpg" alt="Medicine in the Cloud" class="rounded-img">
+            </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
+            <div class="social-links">
+                <a href="mailto:yousufmahomed@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/+27824949750"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://github.com/yousufmahomed"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://trailblazer.me/id/ymahomed1"><i class="fa-brands fa-salesforce"></i></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

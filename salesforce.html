@@ -2,83 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto:wght@300&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>Salesforce & CRM | Dr. Yousuf Mahomed</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/834304401a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/Medicine Stethoscope.png">
-    <title>My Salesforce Adventure - Dr Yousuf Mahomed</title>
 </head>
 <body>
-    <div class="navbar">
-        <a href="/index.html"><i class="fa-sharp fa-solid fa-stethoscope"></i></a>
-        <h1>Dr Yousuf Mahomed</h1>
-        <ul>
-            <li><a href="/index.html" class="menu-link">Home</a></li>
-          <li><a href="/Medical_career.html" class="menu-link">Medical Career</a></li>
-          <li><a href="/portfolio.html" class="menu-link">Portfolio</a></li>
-          <li><a href="/resume.html" class="menu-link">Resume</a></li>
-          
-        </ul>
-      </div>
-      
-    <header>
-        <img src="/images/futuristic_connected_robotic_doctor_with_tablet_by_ociacia_dayg6yt-fullview.jpg" alt="A Picture of a robot doctor" class="hero-pic">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-stethoscope"></i> Dr. Yousuf Mahomed</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Medical_career.html">Medical</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="salesforce.html" class="active">Salesforce</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-small">
+        <div class="hero-content">
+            <h1>Salesforce <span class="highlight">Ecosystem</span></h1>
+            <p>"The future of medicine is in the cloud." — My philosophy on modern healthcare.</p>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>My Salesforce Adventure</h2>
-            <article class="written-section">
-                <p><span class="written-section written-start">Why Salesforce/CRM?</span><br>I was introduced to Trailhead in June 2022. <br>
-                    It seemed like a natural progression as Medicine also has so many elements related to Customer(patient) relationship management. <br>
-                    You are also selling your brand as a doctor, and have to look at potential patients as leads, bring them in as opportunities and then deal with issues and cases as a result of your treatment. <br>
-                    The future of medicine is in the cloud , is a firm belief of mine!!(I have even had the opportunity to even contribute to our provincial E-Health Initiative). <br>
-                    By combining my Salesforce Learning and basic programming knowledge, I have also improved knowledge access and dissemination in my department at the hospital. <br>
-            <article class="written-section">
-                <p><span class="written-section written-start">Goals</span><br>
-                    I must admit, I found it very challenging initially to understand business processes and thinking <br>
-                    But after 6 months I really started to grasp the essence of it and despite failing my first exam , I passed the administrator exam in February 2023. <br>
-                      I combined this with understanding basic programming, and started using <br> Free code camp<i class="fa-brands fa-free-code-camp"></i> <br> The Odin Project <img src="/images/odinproject.png" alt="The odin project logo"> <br> and The Learn enough series <img src="/images/learnenough.png" alt="The learn enough series logo"> <br> to become adept at basic front end development <br>
-                        I am by no means an expert but have a good grasp of the concepts and these made my salesforce journey easier, adding context to my learning of the platform <br>
-                         Using the courses provided by Mike Wheeler has also vastly improve my understanding ( I have even completed the career launch accelerator programme) <br>
-                         Currently I am studying towards my Platform App Builder Certification and hope to write (and pass!!) during 2023 <br>
-                         I am in the process of completing various superbadges on the platform as well, and am hoping to gain experience via Part-time work. <br>
-                        I am hoping to ,mainly, study the full gambit of admin certifications over the next 12 months, and even the web-developer certifications as my programming knowledge grows. <br>
-                        My hope is to combine the medical and CRM/programming spheres of my knowledge to provide a holistic approach to health data management for potential employers.</p>
-                 </article>
-            </article>
-            <article class="written-section">
-                <p><span class="written-section written-start">The Future</span><br>
-                  I am currently working on a CRM style emergency department app for use by doctors to decrease errors via data validation and on-page guidance for abnormal findings and values. <br>
-                   Although in its infancy, it is already shaping up to be a valuable tool, that I may bring to market if fully functional <br>
-                   Please see my <a href="/portfolio.html">Portfolio page</a> to see examples of my teaching and training programs, as well as my extensive medical writing and salesforce achievements/ programming courses. <br>
-                To see my Salesforce Achievements specifically kindly click the Salesforce icon in the footer. </p>
-            </article>
-            <div class="written-section">
-                <p>If you're interested in learning more or working together, please feel free to contact me through any of the following channels: <br>
-                Alternatively click on the icons in the footer to link directly or see my open-source repositories and achievements. <br>
-                </p>
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-envelope"></i> Email: yousufmahomed@gmail.com</li>
-                    <li><i class="fa-brands fa-whatsapp"></i> WhatsApp: +27 (82) 494 9750</li>
-                    <li><i class="fa-brands fa-telegram"></i> Telegram: +27 (82) 494 9750</li>
-                    <li><i class="fa-solid fa-phone"></i> Phone: +27 (82) 494 9750</li>
-                </ul>
+
+    <main class="container">
+        
+        <section class="vision-section">
+            <div class="vision-grid">
+                <div class="vision-text">
+                    <h2>Why CRM in Medicine?</h2>
+                    <p>Medicine is, at its core, <strong>Relationship Management</strong>. Every patient is a lead, every diagnosis is an opportunity, and every treatment plan is a case to be managed.</p>
+                    <p>By applying Salesforce architecture to the clinical environment, we can decrease errors, automate follow-ups, and ensure that patient data serves the patient—not the paperwork.</p>
+                    <div class="badge-row">
+                        <span class="cert-badge">Certified Administrator</span>
+                        <span class="cert-badge">Trailhead Ranger</span>
+                    </div>
+                </div>
+                <div class="vision-image">
+                    <img src="/images/futuristic_connected_robotic_doctor_with_tablet_by_ociacia_dayg6yt-fullview.jpg" alt="Future of Medicine" class="rounded-img shadow-effect">
+                </div>
             </div>
-            
-            <footer class="footer">
-                <a href="mailto:yousufmahomed@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:+27824949750" target="_blank"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://wa.me/+27824949750" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://t.me/yousufmahomed" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                <a href="https://github.com/yousufmahomed"  target="_blank"><i class="fa-brands fa-github"></i></a>
-                 <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                 <a href="https://trailblazer.me/id/ymahomed1" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
-            </footer>
+        </section>
+
+        <section class="journey-section">
+            <h2 class="section-title">Technical Foundation</h2>
+            <div class="about-grid">
+                <div class="card">
+                    <i class="fa-brands fa-salesforce icon"></i>
+                    <h3>Platform Mastery</h3>
+                    <p>Passed the <strong>Certified Administrator</strong> exam in Feb 2023. Expert in Lightning Flows, Custom Objects, and Org Security.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-code icon"></i>
+                    <h3>The Developer Mindset</h3>
+                    <p>Utilizing <strong>freeCodeCamp</strong> and <strong>The Odin Project</strong> to master front-end basics, making Apex and LWC learning more intuitive.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-rocket icon"></i>
+                    <h3>Career Accelerator</h3>
+                    <p>Completed the Mike Wheeler Career Launch Accelerator, focusing on business process thinking and solution architecture.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sf-cta">
+            <div class="card accent-card">
+                <h3>View My Live Builds</h3>
+                <p>From Roster Management tools to ED Assistant apps, see how I translate these certifications into real-world clinical solutions.</p>
+                <a href="portfolio.html" class="btn-primary">Go to Portfolio</a>
+                <a href="https://trailblazer.me/id/ymahomed1" class="btn-secondary" target="_blank">Visit My Trailblazer Profile</a>
+            </div>
         </section>
     </main>
+
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:yousufmahomed@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/+27824949750"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2026 Dr. Yousuf Mahomed</p>
+        </div>
+    </footer>
+
 </body>
 </html>
