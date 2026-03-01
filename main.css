@@ -1,39 +1,55 @@
-/* --- Modern Variables & Reset --- */
+/* --- Modern Theme Variables --- */
 :root {
-  --primary: #0f172a;    /* Deep Navy */
-  --accent: #0d9488;     /* Medical Teal */
-  --bg: #f8fafc;         /* Soft White/Grey */
-  --text: #334155;       /* Slate Grey */
-  --white: #ffffff;
-  --transition: all 0.3s ease;
+  --bg-dark: #050a14;        /* Deep Space Navy */
+  --surface: rgba(255, 255, 255, 0.05); /* Glass Background */
+  --accent: #00f2fe;         /* Cyber Cyan */
+  --accent-alt: #4facfe;     /* Deep Sky Blue */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Inter', sans-serif; /* Clean, modern font */
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- Glassmorphism Components --- */
+.glass-card {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
 }
 
 /* --- Navigation --- */
 .navbar {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px); /* Modern "Glassmorphism" effect */
   padding: 1.5rem 0;
+  background: rgba(5, 10, 20, 0.8);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .nav-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -44,140 +60,198 @@ body {
 .logo {
   font-family: 'Lora', serif;
   font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-.nav-links {
+  font-size: 1.4rem;
+  color: var(--accent);
   display: flex;
-  list-style: none;
-  gap: 2rem;
+  align-items: center;
+  gap: 10px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--text);
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { 
+  text-decoration: none; 
+  color: var(--text-secondary); 
   font-weight: 500;
   transition: var(--transition);
 }
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
-.btn-resume {
-  background: var(--primary);
-  color: white !important;
-  padding: 0.5rem 1.2rem;
-  border-radius: 6px;
-}
+.nav-links a:hover { color: var(--accent); }
 
 /* --- Hero Section --- */
-.hero-img, .rounded-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* This prevents the image from stretching */
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.hero-content {
+.hero {
+  padding: 8rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 4rem;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  color: var(--primary);
+  font-size: 4rem;
+  line-height: 1;
   margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.highlight {
-  color: var(--accent);
+.highlight { color: var(--accent); -webkit-text-fill-color: var(--accent); }
+
+.hero-img-container {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 242, 254, 0.1);
 }
 
-.profile-img {
-  width: 100%;
-  border-radius: 20px; /* Rounded corners are more modern than circles now */
-  box-shadow: 20px 20px 60px #d1d5db, -20px -20px 60px #ffffff;
+.hero-img-container img { width: 100%; display: block; }
+
+/* --- HIGH CONTRAST BUTTON SYSTEM --- */
+
+/* 1. PRIMARY BUTTON (Explore Innovation) 
+   Style: Solid Bright Cyan with Dark Navy Text */
+.btn-primary, 
+.btn-primary:link, 
+.btn-primary:visited {
+    background: #00f2fe !important; /* Ultra-bright Cyan */
+    color: #050a14 !important;      /* Deep Space Navy (Near Black) */
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* --- Features Grid --- */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
+.btn-primary:hover {
+    background: #ffffff !important; /* Flashes white on hover */
+    color: #050a14 !important;
+    box-shadow: 0 0 25px #00f2fe;
+    transform: translateY(-3px);
 }
 
-.about-grid {
+/* 2. SECONDARY BUTTON (Download Medical CV)
+   Style: Dark Background with Bright Cyan Border and Text */
+.btn-secondary, 
+.btn-secondary:link, 
+.btn-secondary:visited {
+    background: rgba(255, 255, 255, 0.05) !important; /* Subtle glass effect */
+    color: #00f2fe !important;      /* Bright Cyan text */
+    border: 2px solid #00f2fe !important;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #00f2fe !important; /* Fills with color on hover */
+    color: #050a14 !important;      /* Flips text to dark for contrast */
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+/* 3. Global override for any other links in these sections */
+.hero-actions a, .resume-actions a {
+    text-decoration: none !important;
+}
+
+/* --- Layout Grid --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+.expertise-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.card {
-  background: var(--white);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
-  border: 1px solid #f1f5f9;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.icon {
-  font-size: 2rem;
-  color: var(--accent);
+.icon-box {
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-}
-
-/* --- Contact Section --- */
-.contact-section {
-  text-align: center;
-  padding: 6rem 0;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.contact-links a {
-  font-size: 1.1rem;
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 2px solid var(--accent);
-}
-
-/* --- Footer --- */
-.main-footer {
-  text-align: center;
-  padding: 4rem;
-  font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
 }
 
 /* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-  .hero-content {
-    grid-template-columns: 1fr;
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-text h1 { font-size: 3rem; }
+}
+
+/* --- High-Visibility Link & Button Fix --- */
+
+/* 1. The CV Button (Specifically targeting the text inside the button) */
+.btn-primary-sm, 
+.btn-primary-sm:link, 
+.btn-primary-sm:visited,
+.btn-primary-sm:active {
+    color: #050a14 !important; /* Forces text to be the dark Navy color for contrast */
+    background: var(--accent) !important; /* Forces the bright Cyan background */
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* 2. Button Hover State (Ensures it stays visible when mouse is over it) */
+.btn-primary-sm:hover {
+    background: #fff !important; /* Turns white on hover */
+    color: #050a14 !important;
+    box-shadow: 0 0 25px var(--accent); /* Adds a cyan glow */
+    transform: translateY(-2px);
+}
+
+/* 3. Global Text Link Fix (For any standard links in your text) */
+a:link {
+    color: var(--accent) !important; /* Bright Cyan */
+}
+
+a:visited {
+    color: var(--accent-alt) !important; /* Light Sky Blue - still visible but shows it was clicked */
+}
+
+a:hover, a:active {
+    color: #ffffff !important; /* Pure white when interacting */
+    text-decoration: underline !important;
+}
+
+/* --- Centered Hero Layout for Resume Page --- */
+.hero-centered {
     text-align: center;
-  }
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-  .nav-links {
-    display: none; /* In a real app, you'd add a hamburger menu here */
-  }
+    padding: 6rem 2rem 2rem; 
+    display: block; /* Overrides the flex/grid of the split hero */
+}
+
+.hero-visual-centered {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img-large {
+    width: 100%;
+    max-width: 450px; /* Reduced from 700px for a better fit */
+    height: auto;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0, 242, 254, 0.2);
+}
+
+.hero-text-centered h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+    margin-bottom: 0.5rem;
+}
+
+.resume-actions-centered {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* breathing room for the resume grid below */
+.resume-grid {
+    margin-top: 5rem;
 }
